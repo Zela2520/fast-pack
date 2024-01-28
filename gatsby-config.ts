@@ -6,7 +6,15 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`
   },
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-emotion"]
+  plugins: ["gatsby-plugin-emotion", 
+  {
+    resolve: `gatsby-plugin-typescript`,
+    options: {
+      isTSX: true,
+      jsxPragma: `React`,
+      allExtensions: true,
+    },
+  },]
 };
 
 export default config;
